@@ -1,6 +1,6 @@
 export const TabelSoal = () => {
   return (
-    <div className="w-full">
+    <div className="w-full h-full">
       <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded ">
         <div className="rounded-t mb-0 px-4 py-3 border-0">
           <div className="flex flex-wrap items-center">
@@ -20,8 +20,8 @@ export const TabelSoal = () => {
           </div>
         </div>
 
-        <div className="block w-full overflow-x-auto">
-          <table className="items-center bg-transparent w-full border-collapse ">
+        <div className="block w-full h-[80vh] overflow-y-scroll">
+          <table className="items-center bg-transparent w-full border-collapse table-fixed">
             <thead>
               <tr>
                 <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
@@ -53,28 +53,28 @@ export const TabelSoal = () => {
 
             <tbody>
               <tr>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left">
-                  Testing Akbar Gantengas
+                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs p-4">
+                  Testing Akbar Gantengasasdsadasdawdasdawdsdwaasdasdadwdasd
                 </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs p-4 ">
                   Testing Akbar Ganteng
                 </td>
-                <td className="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                <td className="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs p-4">
                   Testing Akbar Ganteng
                 </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4">
                   Testing Akbar Ganteng
                 </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4 ">
                   Testing Akbar Ganteng
                 </td>
-                <td className="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                <td className="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs  p-4">
                   Testing Akbar Ganteng
                 </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4">
                   Testing Akbar Ganteng
                 </td>
-                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+                <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs  p-4">
                   1
                 </td>
               </tr>
