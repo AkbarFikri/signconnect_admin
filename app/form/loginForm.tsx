@@ -6,8 +6,10 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { LoadingPage } from "../utils/loadingPage";
 
 export const LoginForm = () => {
+  const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
@@ -17,6 +19,7 @@ export const LoginForm = () => {
     e.preventDefault();
 
     try {
+      setLoading(true);
       const res = await fetch("/api/login", {
         method: "POST",
         body: JSON.stringify({
@@ -28,8 +31,10 @@ export const LoginForm = () => {
         },
       });
       if (res.ok) {
+        setLoading(false);
         router.push("/dashboard");
       } else {
+        setLoading(false);
         setError((await res.json()).error);
       }
     } catch (error: any) {
@@ -37,6 +42,9 @@ export const LoginForm = () => {
     }
   };
 
+  //   if (loading) {
+  //     return <LoadingPage></LoadingPage>;
+  //   }
   return (
     <form onSubmit={onSubmit} className="space-y-12 w-full sm:w-[400px]">
       <div className="grid w-full items-center gap-1.5">
@@ -62,11 +70,20 @@ export const LoginForm = () => {
         />
       </div>
       {error && <Alert>{error}</Alert>}
-      <div className="w-full">
-        <Button className="w-full" size="lg">
-          Login
-        </Button>
-      </div>
+      {loading && (
+        <div className="w-full">
+          <Button className="w-full " size="lg">
+            <div className="border-slate-100 h-5 w-5 animate-spin rounded-full border-[3px] border-t-purple-400"></div>
+          </Button>
+        </div>
+      )}
+      {!loading && (
+        <div className="w-full">
+          <Button className="w-full" size="lg">
+            Login
+          </Button>
+        </div>
+      )}
     </form>
   );
 };
