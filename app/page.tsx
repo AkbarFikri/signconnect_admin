@@ -1,7 +1,9 @@
+"use client";
+import { LoadingPage } from "./utils/loadingPage";
+import { useRouter } from "next/navigation";
+
 export default function Home() {
-  return (
-    <div className="div">
-      <h1>testing</h1>
-    </div>
-  );
+  const router = useRouter();
+  router.push("/login");
+  return <LoadingPage></LoadingPage>;
 }
